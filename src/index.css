@@ -28,6 +28,64 @@ body {
   filter: drop-shadow(0 0 16px rgba(255, 215, 0, 0.35));
 }
 
+/* Calm loading & entrance animations */
+@keyframes calmFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes calmBreathe {
+  0%, 100% {
+    opacity: 0.35;
+    transform: translate(-50%, -50%) scale(0.96);
+  }
+  50% {
+    opacity: 0.65;
+    transform: translate(-50%, -50%) scale(1.06);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-calm-breathe {
+  animation: calmBreathe 9s ease-in-out infinite;
+}
+
+.animate-fade-1 {
+  animation: calmFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-fade-2 {
+  animation: calmFadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+}
+
+.animate-fade-3 {
+  animation: calmFadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+}
+
+.animate-fade-4 {
+  animation: calmFadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) 0.45s both;
+}
+
+.image-skeleton {
+  background: linear-gradient(90deg, #141418 25%, #1a1a20 50%, #141418 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2.2s infinite ease-in-out;
+}
+
 /* Subtle line separator */
 .subtle-divider {
   border-color: #1F1F24;

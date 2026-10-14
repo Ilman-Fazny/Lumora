@@ -7,7 +7,7 @@ export default function WhatsAppFloat() {
 
   return (
     <aside 
-      className="fixed bottom-6 right-6 z-50 group"
+      className="fixed bottom-6 right-6 z-50 group animate-fade-4"
       aria-label="Direct WhatsApp inquiry"
     >
       <a
@@ -17,9 +17,9 @@ export default function WhatsAppFloat() {
         className="relative flex items-center justify-center w-14 h-14 rounded-full bg-gold text-bg shadow-gold-glow transition-all duration-300 hover:scale-110 active:scale-95 focus:outline-none focus:ring-2 focus:ring-gold/80 focus:ring-offset-2 focus:ring-offset-bg"
         aria-label="Chat with Lumora on WhatsApp"
       >
-        {/* Subtle pulsing outer ring */}
+        {/* Subtle calm pulsing outer ring */}
         <span 
-          className="absolute -inset-1 rounded-full bg-gold/30 animate-ping opacity-60 pointer-events-none" 
+          className="absolute -inset-1.5 rounded-full bg-gold/20 animate-pulse pointer-events-none" 
           aria-hidden="true" 
         />
 

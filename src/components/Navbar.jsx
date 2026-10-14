@@ -2,22 +2,41 @@ import React from 'react';
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-40 w-full backdrop-blur-md bg-bg/85 border-b border-borderSubtle/60 transition-colors duration-300">
+    <header className="sticky top-0 z-40 w-full backdrop-blur-md bg-bg/85 border-b border-borderSubtle/60 transition-colors duration-300 animate-fade-1">
       <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
         {/* Brand Logo */}
         <a href="#" className="flex items-center gap-3 group" aria-label="Lumora Home">
           <img 
-            src="/assets/logo/LUMORA%20NEW%20LOGO%20WHITE.png" 
+            src="/assets/logo/lumora-logo-white.png" 
             alt="Lumora Media Productions" 
-            className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+            fetchpriority="high"
+            className="h-9 sm:h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
           />
         </a>
 
-        {/* Minimal Navigation Link */}
-        <nav className="flex items-center gap-8">
+        {/* Section Navigation Links */}
+        <nav className="flex items-center gap-5 sm:gap-8">
+          <a 
+            href="#services" 
+            className="text-xs sm:text-sm font-medium tracking-wide text-cream/70 hover:text-gold transition-colors duration-200"
+          >
+            Services
+          </a>
+          <a 
+            href="#work" 
+            className="text-xs sm:text-sm font-medium tracking-wide text-cream/70 hover:text-gold transition-colors duration-200"
+          >
+            Work
+          </a>
+          <a 
+            href="#about" 
+            className="text-xs sm:text-sm font-medium tracking-wide text-cream/70 hover:text-gold transition-colors duration-200"
+          >
+            About
+          </a>
           <a 
             href="#contact" 
-            className="text-sm font-medium tracking-wide text-cream/80 hover:text-gold transition-colors duration-200"
+            className="text-xs sm:text-sm font-medium tracking-wide px-3 sm:px-4 py-1.5 rounded-full border border-borderSubtle bg-surface/60 text-cream/90 hover:text-gold hover:border-gold/50 transition-all duration-200"
           >
             Contact
           </a>

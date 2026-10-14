@@ -1,6 +1,36 @@
 import React from 'react';
 import { siteData } from '../data/siteData';
 
+function GalleryCard({ item }) {
+  const [isLoaded, setIsLoaded] = React.useState(false);
+
+  return (
+    <div className="group relative aspect-[4/3] sm:aspect-[3/2] overflow-hidden rounded-lg bg-surface border border-borderSubtle/60">
+      {/* Calm subtle dark skeleton shimmer while loading */}
+      {!isLoaded && (
+        <div className="absolute inset-0 image-skeleton" aria-hidden="true" />
+      )}
+
+      <img
+        src={item.src}
+        alt={item.alt}
+        loading="lazy"
+        onLoad={() => setIsLoaded(true)}
+        className={`w-full h-full object-cover object-center transition-all duration-700 ease-out group-hover:scale-105 ${
+          isLoaded ? 'opacity-100' : 'opacity-0'
+        }`}
+      />
+      
+      {/* Subtle gradient vignette — always visible on mobile, reveal on hover for desktop */}
+      <div className="absolute inset-0 bg-gradient-to-t from-bg/90 via-bg/20 to-transparent sm:via-transparent opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4 sm:p-5 pointer-events-none">
+        <span className="text-[11px] sm:text-xs tracking-wider uppercase text-cream/90 font-medium bg-bg/40 sm:bg-transparent px-2 sm:px-0 py-1 sm:py-0 rounded">
+          {item.tag}
+        </span>
+      </div>
+    </div>
+  );
+}
+
 export default function Gallery() {
   const { gallery } = siteData;
 
@@ -25,24 +55,7 @@ export default function Gallery() {
         {/* Photography Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {gallery.map((item) => (
-            <div 
-              key={item.id}
-              className="group relative aspect-[4/3] sm:aspect-[3/2] overflow-hidden rounded-lg bg-surface border border-borderSubtle/60"
-            >
-              <img
-                src={item.src}
-                alt={item.alt}
-                loading="lazy"
-                className="w-full h-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-105"
-              />
-              
-              {/* Subtle gradient vignette on hover */}
-              <div className="absolute inset-0 bg-gradient-to-t from-bg/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-5">
-                <span className="text-xs tracking-wider uppercase text-cream/90 font-medium">
-                  {item.tag}
-                </span>
-              </div>
-            </div>
+            <GalleryCard key={item.id} item={item} />
           ))}
         </div>
       </div>

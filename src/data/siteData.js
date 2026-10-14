@@ -56,41 +56,63 @@ export const siteData = {
   gallery: [
     {
       id: 1,
-      src: "/assets/gallery/crew%207.webp",
+      src: "/assets/gallery/crew-7.webp",
       alt: "Lumora camera operator on gimbal rig at Victorian Walk '26",
       tag: "Gimbal Operation"
     },
     {
       id: 2,
-      src: "/assets/gallery/crew%201.webp",
+      src: "/assets/gallery/crew-1.webp",
       alt: "Lumora crew in branded uniform with production headset",
       tag: "Live Comms"
     },
     {
       id: 3,
-      src: "/assets/gallery/crew%204.webp",
+      src: "/assets/gallery/crew-4.webp",
       alt: "Lumora videographer framing crowd at stadium celebration",
       tag: "Field Coverage"
     },
     {
       id: 4,
-      src: "/assets/gallery/crew%205.webp",
+      src: "/assets/gallery/crew-5.webp",
       alt: "Lumora mobile creator capturing instant vertical reels",
       tag: "Content Capture"
     },
     {
       id: 5,
-      src: "/assets/gallery/crew%208.webp",
+      src: "/assets/gallery/crew-8.webp",
       alt: "Lumora squad member navigating stadium grounds",
       tag: "Event Coordination"
     },
     {
       id: 6,
-      src: "/assets/gallery/crew%202.webp",
+      src: "/assets/gallery/crew-2.webp",
       alt: "Lumora event lead coordinating schedules on call",
       tag: "Production Management"
     }
   ],
+
+  trust: {
+    badge: "PROVEN TRACK RECORD",
+    headline: "Trusted on High-Stakes Stages",
+    highlights: [
+      {
+        name: "Victorian Walk '26",
+        role: "Full Event Video & Live Streaming",
+        metric: "10K+ Attendees"
+      },
+      {
+        name: "Colombo Corporate Summits",
+        role: "Multi-Camera Broadcast & AV Logistics",
+        metric: "Zero Latency Feeds"
+      },
+      {
+        name: "Cinematic Brand Campaigns",
+        role: "Commercial Direction & Fast Social Turnaround",
+        metric: "4K Master Delivery"
+      }
+    ]
+  },
 
   about: {
     title: "One Crew. Zero Gaps.",
