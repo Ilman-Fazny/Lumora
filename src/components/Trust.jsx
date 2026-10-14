@@ -34,9 +34,14 @@ export default function Trust() {
                 <span className="text-[11px] font-mono tracking-widest uppercase text-gold/80 block mb-3">
                   Engagement 0{index + 1}
                 </span>
-                <h3 className="font-heading text-xl text-cream font-medium mb-2">
+                <h3 className="font-heading text-xl text-cream font-medium mb-1">
                   {item.name}
                 </h3>
+                {item.client && (
+                  <p className="text-[11px] uppercase tracking-wider text-gold/80 font-mono mb-3">
+                    {item.client}
+                  </p>
+                )}
                 <p className="text-sm text-textMuted leading-relaxed">
                   {item.role}
                 </p>

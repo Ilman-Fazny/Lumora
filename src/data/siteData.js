@@ -100,17 +100,20 @@ export const siteData = {
     highlights: [
       {
         name: "Victorian Walk '26",
-        role: "Full Event Video & Live Streaming",
+        client: "Royal College / Victorian Walk Committee",
+        role: "Full on-ground event video coverage, gimbal cinematography & multi-camera live streaming.",
         metric: "10K+ Attendees"
       },
       {
-        name: "Colombo Corporate Summits",
-        role: "Multi-Camera Broadcast & AV Logistics",
-        metric: "Zero Latency Feeds"
+        name: "Zentage",
+        client: "Sasnaka Sansada Foundation",
+        role: "End-to-end execution: pre-event marketing campaigns, stage production, live event coverage, cinematic aftermovies & official photo albums.",
+        metric: "Full 360° Media & Production"
       },
       {
         name: "Cinematic Brand Campaigns",
-        role: "Commercial Direction & Fast Social Turnaround",
+        client: "Commercial & Private Sectors",
+        role: "Commercial direction, brand story reels, and fast-turnaround social deliverables for stage & product launches.",
         metric: "4K Master Delivery"
       }
     ]
