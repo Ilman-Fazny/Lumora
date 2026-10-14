@@ -7,7 +7,7 @@ export default function Navbar() {
         {/* Brand Logo */}
         <a href="#" className="flex items-center gap-3 group" aria-label="Lumora Home">
           <img 
-            src="/assets/logo/lumora-logo-white.png" 
+            src={`${import.meta.env.BASE_URL}assets/logo/lumora-logo-white.png`} 
             alt="Lumora Media Productions" 
             fetchpriority="high"
             className="h-9 sm:h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"

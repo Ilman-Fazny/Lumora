@@ -1,3 +1,5 @@
+const base = import.meta.env.BASE_URL;
+
 export const siteData = {
   brand: {
     name: "LUMORA",
@@ -56,37 +58,37 @@ export const siteData = {
   gallery: [
     {
       id: 1,
-      src: "/assets/gallery/crew-7.webp",
+      src: `${base}assets/gallery/crew-7.webp`,
       alt: "Lumora camera operator on gimbal rig at Victorian Walk '26",
       tag: "Gimbal Operation"
     },
     {
       id: 2,
-      src: "/assets/gallery/crew-1.webp",
+      src: `${base}assets/gallery/crew-1.webp`,
       alt: "Lumora crew in branded uniform with production headset",
       tag: "Live Comms"
     },
     {
       id: 3,
-      src: "/assets/gallery/crew-4.webp",
+      src: `${base}assets/gallery/crew-4.webp`,
       alt: "Lumora videographer framing crowd at stadium celebration",
       tag: "Field Coverage"
     },
     {
       id: 4,
-      src: "/assets/gallery/crew-5.webp",
+      src: `${base}assets/gallery/crew-5.webp`,
       alt: "Lumora mobile creator capturing instant vertical reels",
       tag: "Content Capture"
     },
     {
       id: 5,
-      src: "/assets/gallery/crew-8.webp",
+      src: `${base}assets/gallery/crew-8.webp`,
       alt: "Lumora squad member navigating stadium grounds",
       tag: "Event Coordination"
     },
     {
       id: 6,
-      src: "/assets/gallery/crew-2.webp",
+      src: `${base}assets/gallery/crew-2.webp`,
       alt: "Lumora event lead coordinating schedules on call",
       tag: "Production Management"
     }
