@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0A0A0D;
+  --surface: #141418;
+  --border: #1F1F24;
+  --cream: #F5F0E8;
+  --text-muted: #6B6B76;
+  --gold: #FFD700;
+  --burgundy: #800020;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--cream);
+  font-family: 'Inter', sans-serif;
+  letter-spacing: -0.01em;
+}
+
+/* Custom ambient lens radial glow */
+.ambient-glow {
+  background: radial-gradient(circle at 50% 50%, rgba(255, 215, 0, 0.08) 0%, rgba(255, 253, 105, 0.03) 35%, transparent 70%);
+}
+
+.lens-glow {
+  filter: drop-shadow(0 0 16px rgba(255, 215, 0, 0.35));
+}
+
+/* Subtle line separator */
+.subtle-divider {
+  border-color: #1F1F24;
+}
+
+/* Hide scrollbar for clean aesthetics where necessary */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
