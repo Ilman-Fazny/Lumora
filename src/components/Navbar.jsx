@@ -5,11 +5,21 @@ export default function Navbar() {
     <header className="sticky top-0 z-40 w-full backdrop-blur-md bg-bg/85 border-b border-borderSubtle/60 transition-colors duration-300 animate-fade-1">
       <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
         {/* Brand Logo */}
-        <a href="#" className="flex items-center gap-3 group" aria-label="Lumora Home">
+        <a 
+          href="#" 
+          onClick={(e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}
+          className="flex items-center gap-3 group" 
+          aria-label="Lumora Home"
+        >
           <img 
             src={`${import.meta.env.BASE_URL}assets/logo/lumora-logo-white.png`} 
             alt="Lumora Media Productions" 
             fetchpriority="high"
+            width="150"
+            height="40"
             className="h-9 sm:h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
           />
         </a>
