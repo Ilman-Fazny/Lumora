@@ -41,6 +41,14 @@ export default function Hero() {
           </a>
         </div>
       </div>
+
+      {/* Subtle Floating Scroll Prompt */}
+      <div className="animate-fade-4 absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 opacity-40 hover:opacity-80 transition-opacity pointer-events-none select-none">
+        <span className="text-[9px] uppercase tracking-[0.25em] font-mono text-textMuted">Explore</span>
+        <div className="w-3.5 h-6 rounded-full border border-borderSubtle flex items-start justify-center p-0.5">
+          <div className="w-1 h-1.5 rounded-full bg-gold animate-bounce" />
+        </div>
+      </div>
     </section>
   );
 }

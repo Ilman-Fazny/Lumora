@@ -1,11 +1,12 @@
 import React from 'react';
 import { siteData } from '../data/siteData';
+import Reveal from './Reveal';
 
 function GalleryCard({ item }) {
   const [isLoaded, setIsLoaded] = React.useState(false);
 
   return (
-    <div className="group relative aspect-[4/3] sm:aspect-[3/2] overflow-hidden rounded-lg bg-surface border border-borderSubtle/60">
+    <div className="group relative aspect-[4/3] sm:aspect-[3/2] overflow-hidden rounded-lg bg-surface border border-borderSubtle/60 hover:border-gold/40 transition-colors duration-500">
       {/* Calm subtle dark skeleton shimmer while loading */}
       {!isLoaded && (
         <div className="absolute inset-0 image-skeleton" aria-hidden="true" />
@@ -38,24 +39,28 @@ export default function Gallery() {
     <section id="work" className="py-24 sm:py-32 px-6 border-t border-borderSubtle/70">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 sm:mb-16">
-          <div>
-            <p className="text-xs uppercase tracking-[0.25em] text-textMuted font-medium">
-              Field Execution
+        <Reveal>
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 sm:mb-16">
+            <div>
+              <p className="text-xs uppercase tracking-[0.25em] text-textMuted font-medium">
+                Field Execution
+              </p>
+              <h2 className="font-heading text-2xl sm:text-3xl text-cream font-semibold mt-2">
+                Behind The Lens
+              </h2>
+            </div>
+            <p className="text-sm text-textMuted mt-3 sm:mt-0 max-w-xs">
+              A glimpse into our crew capturing moments at Victorian Walk '26.
             </p>
-            <h2 className="font-heading text-2xl sm:text-3xl text-cream font-semibold mt-2">
-              Behind The Lens
-            </h2>
           </div>
-          <p className="text-sm text-textMuted mt-3 sm:mt-0 max-w-xs">
-            A glimpse into our crew capturing moments at Victorian Walk '26.
-          </p>
-        </div>
+        </Reveal>
 
         {/* Photography Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
-          {gallery.map((item) => (
-            <GalleryCard key={item.id} item={item} />
+          {gallery.map((item, index) => (
+            <Reveal key={item.id} delay={index * 90}>
+              <GalleryCard item={item} />
+            </Reveal>
           ))}
         </div>
       </div>
